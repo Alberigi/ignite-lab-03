@@ -1,9 +1,9 @@
-import { HeaderPros, Header } from './Header';
+import { HeadingPros, Heading } from './Heading';
 import { Meta, StoryObj } from '@storybook/react';
 
 export default {
-    tittle: 'Components/Header',
-    component: Header,
+    tittle: 'Components/Heading',
+    component: Heading,
     args: {
         children: 'lorem ipsum '
     },
@@ -15,23 +15,23 @@ export default {
             }
         }
     }
-} as Meta<HeaderPros>
+} as Meta<HeadingPros>
 
-export const Default: StoryObj<HeaderPros> = {}
+export const Default: StoryObj<HeadingPros> = {}
 
-export const Small: StoryObj<HeaderPros> = {
+export const Small: StoryObj<HeadingPros> = {
     args: {
         size: 'sm'
     }
 }
 
-export const Large: StoryObj<HeaderPros> = {
+export const Large: StoryObj<HeadingPros> = {
     args: {
         size: 'lg'
     }
 }
 
-export const CustomComponent: StoryObj<HeaderPros> = {
+export const CustomComponent: StoryObj<HeadingPros> = {
     args: {
         asChildren: true,
         children: (

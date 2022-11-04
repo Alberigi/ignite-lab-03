@@ -1,26 +1,17 @@
-import { Slot } from '@radix-ui/react-slot';
-import { clsx } from 'clsx';
-import { ReactNode } from 'react';
+import { Text } from '../Text/Text';
+import { Logo } from '../Logo/Logo';
+import { Heading } from '../Heading/Heading';
 
-export interface HeaderPros {
-    size?: 'sm' | 'md' | 'lg';
-    children: ReactNode;
-    asChildren: boolean;
-}
-
-export function Header({ size = 'md', children, asChildren }: HeaderPros) {
-    const Comp = asChildren ? Slot : 'h2';
-
+export function Header() {
     return (
-        <Comp className={clsx(
-            'text-gray-100 font-bold',
-            {
-                'text-lg': size === 'sm',
-                'text-xl': size === 'md',
-                'text-2xl': size === 'lg'
-            }
-        )}>
-            {children}
-        </Comp>
+        <header className='flex flex-col items-center '>
+            <Logo />
+
+            <Heading size='lg' className='mt-4'>Ignite Lab</Heading>
+
+            <Text size='lg' className='text-gray-400 mt-1'>
+                Faça seu login e comece a usar
+            </Text>
+        </header>
     )
 }

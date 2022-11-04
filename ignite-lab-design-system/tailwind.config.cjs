@@ -3,12 +3,12 @@ module.exports = {
   content: ["./src/**/*.tsx"],
   theme: {
     fontSize: {
-      xs: 14,
-      sm: 16,
-      md: 18,
-      lg: 20,
-      xl: 24,
-      "2xl": 32,
+      xs: 12,
+      sm: 14,
+      md: 16,
+      lg: 18,
+      xl: 22,
+      "2xl": 30,
     },
 
     colors: {
